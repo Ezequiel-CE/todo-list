@@ -29,17 +29,6 @@ const addElement = function (e) {
   if (userInput.value !== '') {
     createItem(userInput.value);
   }
-
-  // toggle function
-  // const liArr = [...document.querySelectorAll('li')];
-
-  // console.log(liArr);
-
-  // liArr.forEach(li =>
-  //   li.addEventListener('click', function () {
-  //     li.classList.add('done');
-  //   })
-  // );
 };
 
 //delete item
@@ -47,6 +36,12 @@ const addElement = function (e) {
 const deleteItem = function (e) {
   if (e.target.classList.contains('btn-delete')) {
     e.target.parentNode.remove();
+  }
+};
+
+const toggleItem = function (e) {
+  if (e.target.nodeName === 'LI') {
+    e.target.classList.add('done');
   }
 };
 
@@ -62,3 +57,7 @@ btnSubmit.addEventListener('click', addElement);
 //delete item
 
 uList.addEventListener('click', deleteItem);
+
+//togle item
+
+uList.addEventListener('click', toggleItem);
