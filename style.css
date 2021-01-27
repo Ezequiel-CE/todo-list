@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, #ff0084, #aca2a7);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.center {
+  margin: auto;
+  width: 70%;
+}
+
+/* //////////////////////////header////////////////////////// */
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 30px;
+  font-weight: 100;
+}
+
+.title {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url('./photo-1518384401463-d3876163c195.jfif');
+  background-color: black;
+  border-radius: 30px;
+}
+
+/* ////////////////////////// FORM ////////////////////////// */
+
+.input-user {
+  margin-top: 50px;
+  text-align: center;
+}
+
+input {
+  font-size: 20px;
+  text-align: center;
+  outline: none;
+}
+
+.btn {
+  background-color: rgb(188, 240, 110);
+  border: none;
+  padding: 1px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: rgb(150, 190, 90);
+}
+
+/* ////////////////////////// Items ////////////////////////// */
+
+.list-container {
+  margin-top: 10px;
+  padding: 20px;
+}
+
+ul {
+  padding: 0 20%;
+}
+
+ul li {
+  background-color: rgba(255, 255, 255, 0.5);
+  list-style: none;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  flex: 1;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.btn-delete {
+  height: px;
+  display: inline-block;
+  background-color: orangered;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.btn-delete:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.item {
+  display: flex;
+  margin: 5px;
+}
