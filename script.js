@@ -45,10 +45,10 @@ const toggleItem = function (e) {
   }
 };
 
-////////////////////////////////////// events handlers
-
 //clean the list
 uList.innerHTML = '';
+
+////////////////////////////////////// events handlers
 
 //add item
 
