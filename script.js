@@ -5,6 +5,7 @@
 const userInput = document.querySelector('input');
 const btnSubmit = document.querySelector('.btn');
 const uList = document.querySelector('ul');
+const btnClear = document.querySelector('.btn-clear');
 
 ////////////////////////////////////////functions
 
@@ -12,13 +13,12 @@ const uList = document.querySelector('ul');
 const createItem = function (input) {
   const html = `<div class="item">
                     <li>${input}</li>
-                    <button class="btn btn-delete">x</button>
+                    <button class="btn btn-delete">❌</button>
                   </div>`;
 
   uList.insertAdjacentHTML('afterbegin', html);
 
   userInput.value = '';
-  userInput.blur();
 };
 
 // add item
@@ -39,16 +39,25 @@ const deleteItem = function (e) {
   }
 };
 
+// togle item
+
 const toggleItem = function (e) {
   if (e.target.nodeName === 'LI') {
     e.target.classList.add('done');
   }
 };
 
-//clean the list
-uList.innerHTML = '';
+//delete item done function
+
+const deleteDone = function (e) {
+  e.preventDefault();
+  document.querySelectorAll('.done').forEach(item => item.parentNode.remove());
+};
 
 ////////////////////////////////////// events handlers
+
+//clean the list
+uList.innerHTML = '';
 
 //add item
 
@@ -61,3 +70,7 @@ uList.addEventListener('click', deleteItem);
 //togle item
 
 uList.addEventListener('click', toggleItem);
+
+//delete clear
+
+btnClear.addEventListener('click', deleteDone);
