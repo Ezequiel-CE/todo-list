@@ -41,6 +41,8 @@ h2 {
     ),
     url('./photo-1518384401463-d3876163c195.jfif');
   background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 30px;
 }
 
